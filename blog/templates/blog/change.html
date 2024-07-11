@@ -1,0 +1,19 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}
+
+    <title>Change post {{ post.id }} </title>
+
+{% endblock title %}
+
+{% block creator %}
+
+<form class="create-form" action="{% url 'blog:change_post' post.id %}" method="post">
+    {% csrf_token %}
+    <h1>Change your blog here</h1>
+    <input type="text" name="title" placeholder="title...">
+    <input type="text" name='text' placeholder="text...">
+    <button type="submit">Confirm</button>
+</form>
+
+{% endblock creator %}

@@ -1,0 +1,71 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1 {
+    font-size: 24;
+}
+
+a {
+    text-decoration: none;
+}
+
+.post {
+    padding: 10px;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 25px;
+    border: 2px solid black;
+    border-radius: 52px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.create-form {
+    border-radius: 52px;
+    padding: 20px;
+    display: flex;
+    margin: 0 auto;
+    border: 2px solid black;
+    width: 50%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.post-btn {
+    background: red;
+    width: 100px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.create-form button {
+    background: green;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.create-form input {
+    padding: 5px;
+}
+
+.post-cancel-btn {
+    margin-top: 10px;
+    background: rgb(60, 45, 196);
+    width: 100px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.post-change-btn {
+    margin-top: 10px;
+    background: rgb(236, 216, 30);
+    width: 100px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}

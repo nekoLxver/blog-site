@@ -1,0 +1,34 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}
+
+    <title>All blogs</title>
+
+{% endblock title %}
+
+{% block creator %}
+
+<form class="create-form" action="{% url 'blog:show_all' %}" method="post">
+    {% csrf_token %}
+    <h1>Create your blog here</h1>
+    <input type="text" name="title" placeholder="title...">
+    <input type="text" name='text' placeholder="text...">
+    <button type="submit">Confirm</button>
+</form>
+
+{% endblock creator %}
+
+{% block content %}
+
+    {% for post in posts %}
+        <div class="post">
+            <h1> {{ post.author }} </h1>
+            <a href="{% url 'blog:show_detail' post.slug %}"> {{ post.title }} </a>
+            <p> {{ post.text|truncatewords:25 }} </p>
+            <h3> {{ post.create_date }} </h3>
+            <button class="post-btn"><a href="{% url 'blog:delete_post' post.id %}">Delete</a></button>
+            <button class="post-change-btn"><a href="{% url 'blog:change_post' post.id %}">Change</a></button>
+        </div>
+    {% endfor %}
+
+{% endblock content %}
